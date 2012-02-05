@@ -1,0 +1,45 @@
+div.buttons {
+    margin: 20px 0;
+}
+
+div.pgn-drag-drop-zone {
+    height: 200px;
+    border-radius: 20px;
+    border: 8px #aaa dashed;
+
+    &.highlighted {
+        background-color: #bbb;
+
+    }
+
+    ul.file-list {
+        list-style-type: none;
+
+        li.file-item {
+            display: inline-block;
+            margin: 8px 20px;
+
+            div.upload-progress {
+                width: 135px;
+                height: 13px;
+            }
+
+            div.image {
+                background-image: url(/images/pgn.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 64px;
+            }
+
+            div.text {
+                text-align: center;
+            }
+            div.status {
+                font-size: x-small;
+                color: #444;
+                text-align: center;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game controller</title>
+
+    <link rel="stylesheet/less" type="text/css" href="css/board_view.less">
+    <script type="text/javascript" src="js/libs/less-1.1.5.min.js"></script>
+    <script type="text/javascript" src="js/browser.config.js"></script>
+
+    <script type="text/javascript">
+    require = {
+        baseUrl: 'js',
+        paths: libPaths()
+    };
+    </script>
+    <script data-main="demo.game_view" type="text/javascript" src="js/libs/require.js"></script>
+</head>
+<body>
+
+    <script type="text/html" id="chess-game-template">
+        <div class="chess-game-view">
+
+            <div class="board" style="width: 340px; height: 340px; position: relative;">
+
+            </div>
+
+            <div class="navigation-buttons">
+                <button class="to-begin"></button>
+                <button class="next-move"></button>
+                <button class="prev-move"></button>
+                <button class="to-end"></button>
+            </div>
+
+            <div class="moves" data-bind="template: { name: 'chess-game-move-template', foreach: moves }">
+                <script type="text/html" id="chess-game-move-template">
+                    <span data-bind="text: moveIndex, visible: moveIndexVisible"></span>
+                    <a href="#" data-bind="click: onClick"><span data-bind="text: caption"></span></a>
+                </script>
+            </div>
+
+        </div>
+    </script>
+
+    <div data-bind="template: { name: 'chess-game-template', data: gameViewModel }"></div>
+
+</body>
+</html>

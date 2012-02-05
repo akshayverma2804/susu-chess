@@ -1,0 +1,77 @@
+div.chess-board
+{
+    div.square
+    {
+        position: absolute;
+        z-index: 1;
+        
+        &.white
+        {
+            background-color: #fff;
+        }
+
+        &.black
+        {
+            background-color: #aaa;
+        }
+    }
+
+    div.piece
+    {
+        position: absolute;
+        z-index: 2;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image: url('/images/chess-pieces.png');
+
+        &.black.pawn
+        {
+            background-position: -360px -26px;
+        }
+        &.black.rook
+        {
+            background-position: -158px -26px;
+        }
+        &.black.bishop
+        {
+            background-position: -225px -26px;
+        }
+        &.black.knight
+        {
+            background-position: -293px -26px;
+        }
+        &.black.queen
+        {
+            background-position: -91px -26px;
+        }
+        &.black.king
+        {
+            background-position: -23px -26px;
+        }
+
+        &.white.pawn
+        {
+            background-position: -360px -83px;
+        }
+        &.white.rook
+        {
+            background-position: -158px -83px;
+        }
+        &.white.bishop
+        {
+            background-position: -225px -83px;
+        }
+        &.white.knight
+        {
+            background-position: -293px -83px;
+        }
+        &.white.queen
+        {
+            background-position: -91px -83px;
+        }
+        &.white.king
+        {
+            background-position: -23px -83px;
+        }
+    }
+}
