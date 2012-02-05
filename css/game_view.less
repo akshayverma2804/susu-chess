@@ -1,0 +1,71 @@
+.moves {
+
+    line-height: 150%;
+
+    .move-index{
+        color: #666;
+    }
+
+    .move-caption{
+        font-weight: bold;
+    }
+}
+
+table.scrollTable {
+    border-collapse: collapse;
+}
+
+thead.fixedHeader tr {
+    position: relative
+}
+
+html>body thead.fixedHeader tr {
+    display: block
+}
+
+/* make the TH elements pretty */
+thead.fixedHeader th {
+    background: #fff;
+    border: 1px solid #aaa;
+    font-weight: normal;
+    padding: 4px 3px;
+    text-align: left
+}
+
+html>body tbody.scrollContent {
+    display: block;
+    height: 262px;
+    overflow: auto;
+    width: 100%
+}
+
+tbody.scrollContent td, tbody.scrollContent tr td {
+    background: #FFF;
+    border-bottom: none;
+    border-left: none;
+    border: 1px solid #aaa;
+    padding: 2px 3px 3px 4px
+}
+
+html>body thead.fixedHeader th {
+width: 200px
+}
+html>body thead.fixedHeader th + th {
+width: 240px
+}
+html>body thead.fixedHeader th + th + th {
+width: 316px
+}
+
+/* define width of TD elements: 1st, 2nd, and 3rd respectively. */
+/* All other non-IE browsers. */
+/* http://www.w3.org/TR/REC-CSS2/selector.html#adjacent-selectors */
+html>body tbody.scrollContent td {
+width: 200px
+}
+html>body tbody.scrollContent td + td {
+width: 240px
+}
+html>body tbody.scrollContent td + td + td {
+width: 300px
+}
